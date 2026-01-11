@@ -1,0 +1,32 @@
+# Configuration for whatsapp-filter
+# Environment: Windows + Chrome (HEADLESS)
+
+# Path to the input file with phone numbers (one per line).
+# Relative to the folder where you run `whatsapp-filter`.
+input: "data/input_numbers.txt"
+
+# Output files for results
+valid_output: "data/valid_numbers.txt"
+invalid_output: "data/invalid_numbers.txt"
+
+# Browser settings
+browser: "chrome"        # chrome | firefox | edge
+headless: true           # run Chrome without a visible window
+delay: 1.0               # seconds between checks (headless is usually stable at 0.5–1.0)
+
+# Mode settings
+# single   = one Chrome instance, sequential
+# onedriver= one Chrome instance, multiple threads sharing it
+# threaded = multiple Chrome instances, one per worker (faster, more resource usage)
+mode: "single"
+threads: 4               # used by onedriver/threaded modes
+chunk_size: 50           # used by threaded mode (numbers per worker browser)
+
+# WebDriver configuration
+# Leave as null to let webdriver-manager auto-download chromedriver.exe.
+# If auto-download fails (e.g., corporate network), set a path like:
+#   "C:\\WebDrivers\\chromedriver.exe"
+driver_path: null
+
+# Log file (summary of each run is appended here)
+log_file: "run_log.txt"
