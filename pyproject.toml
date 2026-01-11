@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whatsapp-filter"
+version = "0.1.0"
+description = "Filter WhatsApp-registered numbers using WhatsApp Web automation."
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "selenium>=4.0.0",
+    "webdriver-manager>=4.0.0",
+    "pyyaml>=6.0"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://example.com/your-project"
+Source = "https://github.com/yourname/whatsapp-filter"
+
+[project.scripts]
+whatsapp-filter = "whatsapp_filter.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["whatsapp_filter"]
