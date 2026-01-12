@@ -112,19 +112,19 @@ The project is distributed as a Python package with a console script `whatsapp-f
 ## Auto Installer
 
 ### Windows
-Useage: Double Click `run_windows.bat`
+Useage: Double Click `setup_windows.bat`
 or
 In Powershell
 ```command
 cd C:\whatsapp-filter
-.\run_windows.bat
+.\setup_windows.bat
 ```
 
 ### macOS / Linux
 ```command
 cd /path/to/whatsapp-filter
 chmod +x setup_unix.sh      # once
-./run_unix.sh
+./setup_unix.sh
 ```
 
 ## Installation on Windows
