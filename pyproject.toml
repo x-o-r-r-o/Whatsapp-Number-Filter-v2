@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "whatsapp-filter"
-version = "0.1.0"
+version = "2.0.1"
 description = "Filter WhatsApp-registered numbers using WhatsApp Web automation."
 authors = [
-    { name = "Your Name", email = "you@example.com" }
+    { name = "xorro", email = "xcoder@post.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
@@ -34,3 +34,4 @@ whatsapp-filter = "whatsapp_filter.__main__:main"
 where = ["."]
 
 include = ["whatsapp_filter"]
+
