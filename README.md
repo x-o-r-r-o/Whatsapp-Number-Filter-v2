@@ -109,6 +109,24 @@ The project is distributed as a Python package with a console script `whatsapp-f
 
 ---
 
+## Auto Installer
+
+### Windows
+Useage: Double Click `run_windows.bat`
+or
+In Powershell
+```command
+cd C:\whatsapp-filter
+.\run_windows.bat
+```
+
+### macOS / Linux
+```command
+cd /path/to/whatsapp-filter
+chmod +x setup_unix.sh      # once
+./run_unix.sh
+```
+
 ## Installation on Windows
 
 1. **Open PowerShell** and go to the project folder:
@@ -312,6 +330,43 @@ whatsapp-filter
 ```command
 whatsapp-filter --show-examples
 ```
+
+### Direct Commands
+
+For Windows
+```commands
+# Normal (use config.yaml)
+whatsapp-filter
+
+# Force headless (ignores headless=false in config)
+whatsapp-filter --headless
+
+# Force a mode
+whatsapp-filter --mode single
+whatsapp-filter --mode onedriver --threads 4
+whatsapp-filter --mode threaded --threads 4 --chunk-size 50
+
+# Override input/output for this run only
+whatsapp-filter -i data\my_numbers.txt --valid-output data\my_valid.txt --invalid-output data\my_invalid.txt
+```
+
+For macOS/Linux
+```commands
+# Normal (use config.yaml)
+whatsapp-filter
+
+# Headless
+whatsapp-filter --headless
+
+# Force mode
+whatsapp-filter --mode single
+whatsapp-filter --mode onedriver --threads 4
+whatsapp-filter --mode threaded --threads 4 --chunk-size 50
+
+# Override input/output just for this run
+whatsapp-filter -i data/my_numbers.txt --valid-output data/my_valid.txt --invalid-output data/my_invalid.txt
+```
+
 ---
 ## Modes Explained
 1. **single mode**
